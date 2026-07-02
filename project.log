@@ -217,3 +217,56 @@ dtype: int64
 2026-07-01 20:01:01 | INFO | M01 | Problem type:      classification (we want to predict a category)
 2026-07-01 20:01:01 | INFO | M01 | Candidate features: ['island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
 2026-07-01 20:01:01 | INFO | M01 | ========================
+2026-07-01 20:21:45 | INFO | M01 | === RUN START ===
+2026-07-01 20:21:45 | INFO | M01 | project=M01
+2026-07-01 20:21:45 | INFO | M01 | repo_dir=ml-01-intro
+2026-07-01 20:21:45 | INFO | M01 | python=3.14.3
+2026-07-01 20:21:45 | INFO | M01 | os=Windows 11
+2026-07-01 20:21:45 | INFO | M01 | shell=powershell
+2026-07-01 20:21:45 | INFO | M01 | cwd=notebooks
+2026-07-01 20:21:45 | INFO | M01 | github_actions=False
+2026-07-01 20:21:45 | INFO | M01 | Confirming installation:
+2026-07-01 20:21:45 | INFO | M01 |   python:       3.14.3
+2026-07-01 20:21:45 | INFO | M01 |   pandas:       3.0.3
+2026-07-01 20:21:45 | INFO | M01 |   numpy:        2.5.0
+2026-07-01 20:21:45 | INFO | M01 |   scikit-learn: 1.9.0
+2026-07-01 20:21:45 | INFO | M01 |   seaborn:      0.13.2
+2026-07-01 20:21:45 | INFO | M01 |   matplotlib:   3.11.0
+2026-07-01 20:21:45 | INFO | M01 | Built-in Seaborn datasets: ['anagrams', 'anscombe', 'attention', 'brain_networks', 'car_crashes', 'diamonds', 'dots', 'dowjones', 'exercise', 'flights', 'fmri', 'geyser', 'glue', 'healthexp', 'iris', 'mpg', 'penguins', 'planets', 'seaice', 'taxis', 'tips', 'titanic']
+2026-07-01 20:21:45 | INFO | M01 | Loading dataset: tips
+2026-07-01 20:21:46 | INFO | M01 | Loaded: 244 rows (instances), 7 columns
+2026-07-01 20:21:50 | INFO | M01 | Instances (rows): 244
+2026-07-01 20:21:50 | INFO | M01 | Columns:          7
+2026-07-01 20:21:50 | INFO | M01 | Numeric columns (regression target / numeric feature): ['total_bill', 'tip', 'size']
+2026-07-01 20:21:50 | INFO | M01 | Categorical columns (classification target / category): ['sex', 'smoker', 'day', 'time']
+2026-07-01 20:21:50 | INFO | M01 | Missing values by column:
+total_bill    0
+tip           0
+sex           0
+smoker        0
+day           0
+time          0
+size          0
+dtype: int64
+2026-07-01 20:21:50 | INFO | M01 | Missing values across all columns: 0
+2026-07-01 20:21:50 | DEBUG | M01 | First rows:
+2026-07-01 20:21:50 | DEBUG | M01 | 
+   total_bill   tip     sex smoker  day    time  size
+0       16.99  1.01  Female     No  Sun  Dinner     2
+1       10.34  1.66    Male     No  Sun  Dinner     3
+2       21.01  3.50    Male     No  Sun  Dinner     3
+3       23.68  3.31    Male     No  Sun  Dinner     2
+4       24.59  3.61  Female     No  Sun  Dinner     4
+2026-07-01 20:21:50 | INFO | M01 | Chosen target (y): tip
+2026-07-01 20:21:50 | INFO | M01 | Target is numeric? True
+2026-07-01 20:21:50 | INFO | M01 | Implied problem type: regression (we want to predict a number)
+2026-07-01 20:21:50 | INFO | M01 | Candidate features (X): ['total_bill', 'sex', 'smoker', 'day', 'time', 'size']
+2026-07-01 20:21:50 | INFO | M01 | ========================
+2026-07-01 20:21:50 | INFO | M01 | SUMMARY OF KEY FACTS
+2026-07-01 20:21:50 | INFO | M01 | ========================
+2026-07-01 20:21:50 | INFO | M01 | Dataset:           tips
+2026-07-01 20:21:50 | INFO | M01 | Instances:         244
+2026-07-01 20:21:50 | INFO | M01 | Candidate target:  tip
+2026-07-01 20:21:50 | INFO | M01 | Problem type:      regression (we want to predict a number)
+2026-07-01 20:21:50 | INFO | M01 | Candidate features: ['total_bill', 'sex', 'smoker', 'day', 'time', 'size']
+2026-07-01 20:21:50 | INFO | M01 | ========================
