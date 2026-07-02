@@ -84,6 +84,24 @@ Executed successfully!
 
 A new file `project.log` will appear in the root project folder.
 
+## Session Progress (2026-07-01)
+
+Tasks completed in this working session:
+
+- Updated and synced the environment with uv (`uv self update`, `uv python pin 3.14`, `uv sync --extra dev --extra docs --upgrade`).
+- Installed and ran pre-commit checks (`uvx pre-commit install`, `uvx pre-commit run --all-files`).
+- Confirmed VS Code is configured to use the local `.venv` interpreter.
+- Ran the example app with `uv run python -m mlstudio.app_case`.
+- Verified successful app output and generated `project.log` in the project root.
+- Created a personal notebook copy: `notebooks/ml_01_crews.ipynb` from `notebooks/ml_01_case.ipynb`.
+- Staged, committed, and pushed changes to `origin/main`.
+
+Current status:
+
+- App example run: complete.
+- Notebook copy: complete.
+- Notebook execution in the copied notebook: pending final run and screenshot capture.
+
 ## Command Reference
 
 <details>

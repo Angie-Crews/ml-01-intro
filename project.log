@@ -164,3 +164,56 @@ dtype: int64
 2026-07-01 19:40:48 | INFO | ML | ========================
 2026-07-01 19:40:48 | INFO | ML | Executed successfully!
 2026-07-01 19:40:48 | INFO | ML | ========================
+2026-07-01 20:01:01 | INFO | M01 | === RUN START ===
+2026-07-01 20:01:01 | INFO | M01 | project=M01
+2026-07-01 20:01:01 | INFO | M01 | repo_dir=ml-01-intro
+2026-07-01 20:01:01 | INFO | M01 | python=3.14.3
+2026-07-01 20:01:01 | INFO | M01 | os=Windows 11
+2026-07-01 20:01:01 | INFO | M01 | shell=powershell
+2026-07-01 20:01:01 | INFO | M01 | cwd=notebooks
+2026-07-01 20:01:01 | INFO | M01 | github_actions=False
+2026-07-01 20:01:01 | INFO | M01 | Confirming installation:
+2026-07-01 20:01:01 | INFO | M01 |   python:       3.14.3
+2026-07-01 20:01:01 | INFO | M01 |   pandas:       3.0.3
+2026-07-01 20:01:01 | INFO | M01 |   numpy:        2.5.0
+2026-07-01 20:01:01 | INFO | M01 |   scikit-learn: 1.9.0
+2026-07-01 20:01:01 | INFO | M01 |   seaborn:      0.13.2
+2026-07-01 20:01:01 | INFO | M01 |   matplotlib:   3.11.0
+2026-07-01 20:01:01 | INFO | M01 | Built-in Seaborn datasets: ['anagrams', 'anscombe', 'attention', 'brain_networks', 'car_crashes', 'diamonds', 'dots', 'dowjones', 'exercise', 'flights', 'fmri', 'geyser', 'glue', 'healthexp', 'iris', 'mpg', 'penguins', 'planets', 'seaice', 'taxis', 'tips', 'titanic']
+2026-07-01 20:01:01 | INFO | M01 | Loading dataset: penguins
+2026-07-01 20:01:01 | INFO | M01 | Loaded: 344 rows (instances), 7 columns
+2026-07-01 20:01:01 | INFO | M01 | Instances (rows): 344
+2026-07-01 20:01:01 | INFO | M01 | Columns:          7
+2026-07-01 20:01:01 | INFO | M01 | Numeric columns (regression target / numeric feature): ['bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g']
+2026-07-01 20:01:01 | INFO | M01 | Categorical columns (classification target / category): ['species', 'island', 'sex']
+2026-07-01 20:01:01 | INFO | M01 | Missing values by column:
+species               0
+island                0
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+sex                  11
+dtype: int64
+2026-07-01 20:01:01 | INFO | M01 | Missing values across all columns: 19
+2026-07-01 20:01:01 | DEBUG | M01 | First rows:
+2026-07-01 20:01:01 | DEBUG | M01 | 
+  species     island  bill_length_mm  bill_depth_mm  flipper_length_mm  body_mass_g     sex
+0  Adelie  Torgersen            39.1           18.7              181.0       3750.0    Male
+1  Adelie  Torgersen            39.5           17.4              186.0       3800.0  Female
+2  Adelie  Torgersen            40.3           18.0              195.0       3250.0  Female
+3  Adelie  Torgersen             NaN            NaN                NaN          NaN     NaN
+4  Adelie  Torgersen            36.7           19.3              193.0       3450.0  Female
+2026-07-01 20:01:01 | INFO | M01 | Chosen target (y): species
+2026-07-01 20:01:01 | INFO | M01 | Target is numeric? False
+2026-07-01 20:01:01 | INFO | M01 | Implied problem type: classification (we want to predict a category)
+2026-07-01 20:01:01 | INFO | M01 | Candidate features (X): ['island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+2026-07-01 20:01:01 | INFO | M01 | ========================
+2026-07-01 20:01:01 | INFO | M01 | SUMMARY OF KEY FACTS
+2026-07-01 20:01:01 | INFO | M01 | ========================
+2026-07-01 20:01:01 | INFO | M01 | Dataset:           penguins
+2026-07-01 20:01:01 | INFO | M01 | Instances:         344
+2026-07-01 20:01:01 | INFO | M01 | Candidate target:  species
+2026-07-01 20:01:01 | INFO | M01 | Problem type:      classification (we want to predict a category)
+2026-07-01 20:01:01 | INFO | M01 | Candidate features: ['island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+2026-07-01 20:01:01 | INFO | M01 | ========================
