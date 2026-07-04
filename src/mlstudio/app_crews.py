@@ -191,6 +191,23 @@ def train_model(df_clean: pd.DataFrame) -> LinearRegression:
     return model
 
 
+def report_top_driver(model: LinearRegression) -> None:
+    """Log the most influential feature by absolute coefficient magnitude."""
+    coefficient_df = pd.DataFrame(
+        {
+            "feature": FEATURE_COLS,
+            "coefficient": model.coef_,
+        }
+    )
+    coefficient_df["abs_coefficient"] = coefficient_df["coefficient"].abs()
+
+    top_row = coefficient_df.sort_values("abs_coefficient", ascending=False).iloc[0]
+    top_feature = str(top_row["feature"])
+    top_value = float(top_row["coefficient"])
+
+    LOG.info(f"Top driver by absolute coefficient: {top_feature} ({top_value:.3f})")
+
+
 # === Section 7. Predict One New Example ===
 
 
@@ -301,6 +318,9 @@ def main() -> None:
 
     LOG.info("Train supervised model....")
     model = train_model(df_clean)
+
+    LOG.info("Report top model driver...")
+    report_top_driver(model)
 
     LOG.info("Predict one example.......")
     predict_example(model)

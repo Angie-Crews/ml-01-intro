@@ -23,56 +23,93 @@ to get the example projects running on your machine.
 
 ## Phase 4. Technical Modification
 
-Describe your small technical modification to the example project.
+For Phase 4, I modified my custom app module to add one new model-interpretation step.
 
-Include:
+What I changed:
 
-- What you changed
-- Why you chose that change
-- How you verified that it worked
-- What result, output, chart, metric, or behavior confirmed the change
+- Added a helper function named report_top_driver() in src/mlstudio/app_crews.py.
+- The function builds a coefficient table, computes absolute coefficient values,
+  selects the largest one, and logs the top driver feature.
+- Called this helper in main() immediately after training the model.
 
-Compared with the example project,
-explain what is different and why the change matters.
+Why I chose this change:
 
-Was it easy, or surprisingly challenging and why do you think so?
+- It is small and safe, but adds useful interpretation to model output.
+- It keeps the workflow simple while demonstrating a meaningful technical edit.
+
+How I verified it worked:
+
+- Ran tests with uv run python -m pytest.
+- Added a new test file tests/test_app_crews.py with a test that trains a small model
+  and executes report_top_driver() successfully.
+- Ran the custom app with uv run python -m mlstudio.app_crews.
+
+Observed result and new behavior:
+
+- The app now logs a new line identifying the strongest driver, for example:
+  "Top driver by absolute coefficient: <feature> (<value>)".
+- This behavior did not exist before my modification.
+
+Difficulty rating:
+
+- Easy to moderate.
+- The code change was straightforward; the main care point was ensuring the helper
+  used the same feature order as model training.
 
 ## Phase 5. Custom Project (OPTIONAL in Module 1)
 
-Describe your custom project.
+My custom project uses the course hours-and-scores dataset and customizes the
+workflow in my own module and notebook.
 
-In Module 1, this includes choosing a dataset, identifying a target,
-and explaining what kind of ML problem it represents.
+For Module 1, I focused on a complete and reliable implementation that runs
+cleanly and demonstrates understanding of supervised regression.
 
 ### Basis and Data
 
-Describe the dataset, input, or example you started with.
+Dataset and source:
 
-Include:
+- data/raw/hours_scores_case.csv from the project starter resources.
 
-- The original example dataset or input
-- The data source
-- Why you chose it, kept it, or changed it
-- Any important limitations or assumptions
+Why this dataset:
+
+- It is small and clean, which is appropriate for Module 1 setup and validation.
+- It allows fast iteration while I build confidence with workflow and tooling.
+
+Limitations and assumptions:
+
+- Very small sample size (10 rows), so model metrics can vary by split.
+- Results are educational and not intended for production decisions.
 
 ### Modeling Approach
 
-Describe the problem type and approach for this project.
+Problem type and approach:
 
-Include:
-
-- Is this supervised or unsupervised and how do you know
+- Supervised learning because the target column is specified.
+- Regression because the target score is numeric and continuous.
+- Model: LinearRegression with a train/test split.
 
 ### Summary
 
-Summarize your custom project.
+Implementation summary:
 
-Include:
+- Created and ran my custom files (app_crews.py and ml_01_crews.ipynb).
+- Added one technical enhancement to improve interpretability (top driver logging).
+- Updated docs and validated behavior with tests and app execution.
 
-- How you implemented your custom work
-- What results you got
-- What you learned
-- How well you exercised the skills covered in this project
-- What kinds of real problems you could apply these skills to in the future
+Results:
+
+- The workflow runs successfully and produces model metrics, prediction output,
+  and charts.
+- The app now explicitly reports the strongest coefficient driver in logs.
+
+What I learned:
+
+- How to safely modify a working ML script without breaking baseline behavior.
+- How to verify changes using both automated tests and direct execution.
+
+Future applications:
+
+- This workflow can be adapted to practical prediction tasks where feature impact
+	and model explainability are important.
 
 Display at least one image or screenshot showing your work.

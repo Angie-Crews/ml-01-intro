@@ -35,6 +35,7 @@ See [docs/your-files.md] for more.
 Links:
 
 - [ml_01_case.ipynb](notebooks/ml_01_case.ipynb)
+- [ml_01_crews.ipynb](notebooks/ml_01_crews.ipynb)
 
 ## Working Files
 
@@ -143,6 +144,9 @@ uvx pre-commit run --all-files
 
 # run the example module to verify the environment (.venv/)
 uv run python -m mlstudio.app_case
+
+# run the customized module for this project
+uv run python -m mlstudio.app_crews
 
 # run common chores: format, lint, run checks and tests...
 uv run ruff format .
