@@ -85,23 +85,50 @@ Executed successfully!
 
 A new file `project.log` will appear in the root project folder.
 
-## Session Progress (2026-07-01)
+## Phase Progress (Updated 2026-07-04)
 
-Tasks completed in this working session:
+### Phase 1. Start and Run
 
-- Updated and synced the environment with uv (`uv self update`, `uv python pin 3.14`, `uv sync --extra dev --extra docs --upgrade`).
-- Installed and ran pre-commit checks (`uvx pre-commit install`, `uvx pre-commit run --all-files`).
-- Confirmed VS Code is configured to use the local `.venv` interpreter.
-- Ran the example app with `uv run python -m mlstudio.app_case`.
-- Verified successful app output and generated `project.log` in the project root.
-- Created a personal notebook copy: `notebooks/ml_01_crews.ipynb` from `notebooks/ml_01_case.ipynb`.
-- Staged, committed, and pushed changes to `origin/main`.
+Completed.
 
-Current status:
+- Set up the project environment with uv.
+- Ran the example app successfully with `uv run python -m mlstudio.app_case`.
+- Verified expected successful execution output and generated `project.log`.
 
-- App example run: complete.
-- Notebook copy: complete.
-- Notebook execution in the copied notebook: pending final run and screenshot capture.
+### Phase 2. Change Authorship
+
+Completed.
+
+- Updated project identity details for Angie Crews in project configuration.
+- Confirmed repository links point to the correct GitHub project.
+
+### Phase 3. Read and Understand
+
+Completed.
+
+- Reviewed project instructions and workflow guidance.
+- Created a personal notebook copy: `notebooks/ml_01_crews.ipynb`.
+- Confirmed understanding of dataset, selected target, and supervised regression framing.
+
+### Phase 4. Technical Modification
+
+Completed.
+
+- Added a technical enhancement in `src/mlstudio/app_crews.py`:
+	`report_top_driver()` computes and logs the strongest feature by absolute coefficient.
+- Integrated the new step into the custom app workflow immediately after model training.
+- Added tests in `tests/test_app_crews.py`.
+- Verified with `uv run python -m pytest` and a successful app run:
+	`uv run python -m mlstudio.app_crews`.
+
+### Phase 5. Apply the Skills (Module 1 Optional)
+
+Completed for this module submission.
+
+- Implemented and ran a custom project workflow using `hours_scores_case.csv`.
+- Documented custom narrative in `docs/index.md` for Phase 4 and Phase 5.
+- Added custom notebook and run command links in this README.
+- Collected evidence screenshots showing successful execution and project updates on GitHub.
 
 ## Command Reference
 
