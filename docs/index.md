@@ -35,7 +35,7 @@ What I changed:
 Why I chose this change:
 
 - It is small and safe, but adds useful interpretation to model output.
-- It keeps the workflow simple while demonstrating a meaningful technical edit.
+- It keeps the project simple while showing that I can safely modify a working machine learning application.
 
 How I verified it worked:
 
@@ -46,7 +46,7 @@ How I verified it worked:
 
 Observed result and new behavior:
 
-- The app now logs a new line identifying the strongest driver, for example:
+- The app now reports which feature has the strongest influence on the prediction. This information was not included before my change:
   "Top driver by absolute coefficient: <feature> (<value>)".
 - This behavior did not exist before my modification.
 
@@ -73,7 +73,7 @@ Dataset and source:
 Why this dataset:
 
 - It is small and clean, which is appropriate for Module 1 setup and validation.
-- It allows fast iteration while I build confidence with workflow and tooling.
+- It let me focus on learning the workflow without working with a large or complicated dataset.
 
 Limitations and assumptions:
 
@@ -93,14 +93,14 @@ Problem type and approach:
 Implementation summary:
 
 - Created and ran my custom files (app_crews.py and ml_01_crews.ipynb).
-- Added one technical enhancement to improve interpretability (top driver logging).
+- Added one enhancement that makes the model output easier to understand.
 - Updated docs and validated behavior with tests and app execution.
 
 Results:
 
 - The workflow runs successfully and produces model metrics, prediction output,
   and charts.
-- The app now explicitly reports the strongest coefficient driver in logs.
+- TThe app now reports which feature has the biggest impact on the prediction.
 
 What I learned:
 
